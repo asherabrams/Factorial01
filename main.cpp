@@ -21,13 +21,12 @@ long int func01(long int);
 // DEFINITIONS
 long int func01(long int x)
 {
-    for(y = 1; y < 16; y++)
-    {
-        x = x*y;
-        cout << x << '\n';
-        cout << '\n';
+    if(x==0 || x==1){ return 0;
     }
-    return x;
+    else
+    {
+    return (x*func01(x-1));
+    }
 }
 
 // MAIN
